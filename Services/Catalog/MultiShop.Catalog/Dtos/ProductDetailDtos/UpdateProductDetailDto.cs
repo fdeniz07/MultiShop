@@ -1,20 +1,14 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using MultiShop.Catalog.Entities;
 
-namespace MultiShop.Catalog.Entities
+namespace MultiShop.Catalog.Dtos.ProductDetailDtos
 {
-    public class ProductDetail
+    public class UpdateProductDetailDto
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string Description { get; set; }
         public string Info { get; set; }
-
-        [BsonIgnore]
-        public Product Product { get; set; }
-
-        [BsonRepresentation(BsonType.ObjectId)]
         public string ProductId { get; set; }
     }
 }

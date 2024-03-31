@@ -37,7 +37,7 @@ namespace MultiShop.Catalog.Controllers
 
         }
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> DeleteCategory(string id)
         {
             await _categoryService.DeleteCategoryAsync(id);

@@ -23,13 +23,13 @@ namespace MultiShop.Catalog.Services.ProductServices
 
         public async Task CreateProductAsync(CreateProductDto createProductDto)
         {
-            var values = _mapper.Map<Product>(createProductDto);
-            await _productCollection.InsertOneAsync(values);
+            var value = _mapper.Map<Product>(createProductDto);
+            await _productCollection.InsertOneAsync(value);
         }
 
         public async Task DeleteProductAsync(string id)
         {
-            await _productCollection.DeleteOneAsync(id);
+            await _productCollection.DeleteOneAsync(x => x.Id == id);
         }
 
         public async Task<List<ResultProductDto>> GetAllProductAsync()

@@ -38,7 +38,7 @@ namespace MultiShop.Catalog.Controllers
 
         }
 
-        [HttpPost]
+        [HttpDelete]
         public async Task<IActionResult> DeleteProductImage(string id)
         {
             await _productImageService.DeleteProductImageAsync(id);

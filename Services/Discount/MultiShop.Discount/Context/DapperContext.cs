@@ -16,7 +16,6 @@ namespace MultiShop.Discount.Context
             _connectionString = _configuration.GetConnectionString("DefaultConnection");
         }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
